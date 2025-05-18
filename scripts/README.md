@@ -1,62 +1,41 @@
-# MoonLight Energy Solutions - Solar Challenge Week 1
+#Solar Challenge Week 1
+This repository contains the code and analysis for MoonLight Energy Solutions' solar investment strategy, focusing on solar radiation data analysis for Benin, Sierra Leone, and Togo.
+Setup Instructions
 
-This repository contains the work for the Week 1 challenge set by 10Acadamy. As an Analytics Engineer, the project focuses on analyzing environmental data from solar farms to understand key trends, explore relationships between variables, and identify insights. The ultimate goal is to develop a data-driven strategy report recommending high-potential regions for future solar installations, thereby contributing to MoonLight Energy Solutions' operational efficiency and sustainability objectives.
+##Clone the Repository:
+https://github.com/FasikaBelayneh/solar-challenge-week1.git
+cd solar-challenge-week1
 
----
 
-## Development Environment Setup
+##Set Up Virtual Environment:
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-To get the development environment running, follow these steps:
 
-1.  **Clone the Repository:**
-    Open your terminal or command prompt and clone the project from GitHub:
-    ```bash
-    git clone https://github.com/FasikaBelayneh/solar-challenge-week1.git
-    ```
-2.  **Navigate into the Project Directory:**
-    ```bash
-    cd solar-challenge-week1
-    ```
+##Install Dependencies:
+pip install -r requirements.txt
 
-3.  **Set up a Python Virtual Environment:**
-    It is highly recommended to use a virtual environment to manage project dependencies. You can use either `venv` (built-in) or `conda`.
 
-    * **Option A: Using `venv`**
-        Create the virtual environment:
-        ```bash
-        python -m venv .venv
-        ```
-        Activate the virtual environment:
-        * **On macOS and Linux:**
-            ```bash
-            source .venv/bin/activate
-            ```
-        * **On Windows (Command Prompt):**
-            ```bash
-            .venv\Scripts\activate.bat
-            ```
-        * **On Windows (PowerShell):**
-            ```powershell
-            .venv\Scripts\Activate.ps1
-            ```
+##Folder Structure:
 
-    * **Option B: Using `conda`**
-        Create a new conda environment (you can specify a Python version, e.g., `python=3.9`):
-        ```bash
-        conda create -n solar-challenge python=3.9
-        ```
-        Activate the conda environment:
-        ```bash
-        conda activate solar-challenge
-        ```
+data/: Store cleaned CSV files (ignored in .gitignore).
+notebooks/: Jupyter notebooks for EDA.
+scripts/: Python scripts for data processing.
+app/: Streamlit dashboard code (Task 4).
 
-4.  **Install Dependencies:**
-    With your virtual environment activated, install the required packages using the `requirements.txt` file:
-    ```bash
-    pip install -r requirements.txt
-    ```
+
+##Running the Code:
+
+Place cleaned datasets in data/.
+Run notebooks in notebooks/ for EDA.
+Run Streamlit app: streamlit run app/main.py.
 
 
 
+##Tasks
 
+Task 1: Git setup, virtual environment, and CI pipeline.
+Task 2: EDA on solar radiation data for each country.
+Task 3: Cross-country comparison of solar potential.
+Task 4:  Streamlit dashboard.
 
