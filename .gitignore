@@ -1,4 +1,4 @@
-solar-challenge-week1/data/
+data/
 *.csv
 .ipynb_checkpoints/
 .venv/
