@@ -1,0 +1,6 @@
+solar-challenge-week1/data/
+*.csv
+.ipynb_checkpoints/
+.venv/
+.vscode/
+*.log
