@@ -19,7 +19,7 @@ def load_data():
         sl_df['Country'] = 'Sierra Leone'
         togo_df['Country'] = 'Togo'
         combined_df = pd.concat([benin_df, sl_df, togo_df], ignore_index=True)
-        # Ensure non-negative values (fallback)
+        # Ensure non-negative values
         for col in ['GHI', 'DNI', 'DHI']:
             if (combined_df[col] < 0).any():
                 st.warning(f"Negative values detected in {col}. Clipping to zero.")
@@ -35,8 +35,12 @@ def load_data():
 combined_df = load_data()
 
 if not combined_df.empty:
-    st.write("Data Preview:")
-    st.write(combined_df[['Country', 'GHI', 'DNI', 'DHI']].head())
+    st.subheader("Random Data Preview")
+    # Add slider for number of rows to sample
+    sample_size = st.slider("Select number of rows to display", min_value=1, max_value=50, value=5)
+    # Randomly sample rows
+    random_sample = combined_df[['Country', 'GHI', 'DNI', 'DHI']].sample(n=sample_size, random_state=None)
+    st.write(random_sample)
 
     st.subheader("Select Countries")
     countries = st.multiselect(
