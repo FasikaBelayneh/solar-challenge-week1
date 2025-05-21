@@ -6,3 +6,4 @@ scipy
 streamlit
 jupyter
 charset-normalizer
+windrose
